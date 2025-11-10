@@ -18,29 +18,33 @@ This repository contains the backend service for processing and managing bank st
 ### Installation
 
 ```bash
-git clone https://github.com/your-org/bank-statement-backend.git
+git clone https://github.com/rizalsidikp/bank-statement-backend.git
 cd bank-statement-backend
-npm install
+go mod tidy
+go run cmd/main.go
 ```
 
-### Configuration
+## Unit Test
 
-Create a `.env` file based on `.env.example` and set the required environment variables.
+### Running Unit Test
 
-### Running the Application
+```go test ./... -coverprofile=coverage.out```
 
-```bash
-npm start
-```
+### Show Result Of Unit Test
 
-## API Documentation
+```go tool cover -html=coverage.out```
 
-See [API.md](API.md) for detailed endpoint information.
+**Notes:** If the command does not work, take out ".out" from the command
 
-## Contributing
+## Docker
 
-Contributions are welcome! Please open issues or submit pull requests.
+### Build Docker
 
-## License
+```docker build -t bank-statement-backend .```
 
-This project is licensed under the MIT License.
+### Run Docker Container
+
+```docker run --rm -p 3000:3000 bank-statement-backend```
+
+## Github Workflow
+The Github workflow run unit test and build docker
