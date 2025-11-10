@@ -6,16 +6,14 @@ This repository contains the backend service for processing and managing bank st
 
 - Upload and parse bank statements
 - Store transaction data securely
-- API endpoints for querying statements and transactions
-- User authentication and authorization
+- Returns total balance
+- Returns non-successful transactions
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (version X.X.X)
-- npm or yarn
-- MongoDB or other supported database
+- Go (version 1.20 or higher)
 
 ### Installation
 
