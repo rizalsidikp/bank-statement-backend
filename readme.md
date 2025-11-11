@@ -44,7 +44,7 @@ go run cmd/main.go
 
 ### Run Docker Container
 
-```docker run --rm -p 3000:3000 bank-statement-backend```
+```docker run --rm -p 8080:8080 bank-statement-backend```
 
 ## Github Workflow
 The Github workflow run unit test and build docker

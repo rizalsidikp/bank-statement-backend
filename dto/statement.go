@@ -13,8 +13,9 @@ type StatementDTO struct {
 }
 
 type StatementSummaryDTO struct {
-	TotalDebit  int64 `json:"total_debit"`
-	TotalCredit int64 `json:"total_credit"`
+	TotalDebit   int64 `json:"total_debit"`
+	TotalCredit  int64 `json:"total_credit"`
+	TotalBalance int64 `json:"total_balance"`
 }
 
 type CreateStatementDTO struct {
@@ -64,4 +65,5 @@ func ToStatementModels(dtos []StatementDTO) (statements []models.Statement) {
 func (dto *StatementSummaryDTO) FromSummaryModel(summary *models.StatementSummary) {
 	dto.TotalDebit = summary.TotalDebit
 	dto.TotalCredit = summary.TotalCredit
+	dto.TotalBalance = summary.TotalCredit - summary.TotalDebit
 }

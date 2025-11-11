@@ -40,5 +40,5 @@ func main() {
 	statementHandler.Routes(routeGroup)
 
 	// listen and serve on
-	app.Listen(":3000")
+	app.Listen(":8080")
 }
