@@ -28,11 +28,15 @@ go run cmd/main.go
 
 ### Running Unit Test
 
-```go test ./... -coverprofile=coverage.out```
+```go test ./... -tags=test -coverprofile=coverage.out```
+or
+```go test ./... -tags=test "-coverprofile=coverage.out"```
 
 ### Show Result Of Unit Test
 
 ```go tool cover -html=coverage.out```
+or
+```go tool cover "-html=coverage.out"```
 
 **Notes:** If the command does not work, take out ".out" from the command
 
